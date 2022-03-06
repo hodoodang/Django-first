@@ -3,4 +3,10 @@ from django.http import HttpResponse
 
 
 def say_hello(request):
-    return HttpResponse('Hello World')
+    return render(
+        request,
+        template_name='hello.html',
+        context={
+            'name': 'Hodoo'
+        }
+    )
